@@ -1,5 +1,5 @@
 {
-  "name": "qrpass-client",
+  "name": "QR-Trail",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,21 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@chenfengyuan/vue-qrcode": "^1.0.2",
+    "axios": "^0.19.2",
+    "buefy": "^0.8.20",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "crypto-js": "^4.0.0",
+    "file-saver": "^2.0.2",
+    "ncrypt-js": "^2.0.0",
+    "papaparse": "^5.2.0",
+    "simple-crypto-js": "^3.0.0",
+    "socket.io-client": "^2.3.0",
+    "vue": "^2.6.11",
+    "vue-localstorage": "^0.6.2",
+    "vue-qrcode-reader": "^2.3.12",
+    "vue-router": "^3.4.3",
+    "vue-socket.io": "^3.0.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

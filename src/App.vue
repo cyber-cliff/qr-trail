@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<router-view :visitors="visitors" />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Vue from "vue";
+import { EventBus } from "./event-bus.js";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	created() {
+		EventBus.$on("visitor:add", (visitor) => {
+			this.visitors.push(visitor);
+			Vue.localStorage.set("visitors", JSON.stringify(this.visitors));
+		});
+
+		const visitors = Vue.localStorage.get("visitors");
+		if (visitors) {
+			this.visitors = JSON.parse(visitors);
+		}
+	},
+	data() {
+		return {
+			visitors: [],
+		};
+	},
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #2c3e50;
+	padding: 20px;
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.boxu {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 </style>
