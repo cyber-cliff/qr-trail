@@ -21,10 +21,13 @@ Alternatively, they can just have the security personnel, manually clear all the
 ## FAQ
 
 - **Q:** Which data does the app collect?
-  **A:** The app asks for the following info: Last name, first name, middle name, nationality, age, gender, phone number, address.
+
+**A:** The app asks for the following info: Last name, first name, middle name, nationality, age, gender, phone number, address.
 
 - **Q:** Is my data stored in a database somewhere?
-  **A:** No. This web app doesn't use or communicate with any database. All your data is stored on your phone (or computer). You can simply clear your history and all the data used by the app will be removed from your phone.
 
-- **Q: ** Can the app be used by anyone?
-**A: ** Yes. But it's only for demo purposes. The app is currently served on a static file server site called [surge.sh](https://surge.sh). It is free so reliability can't really be ensured, especially if a lot of people starts using it. Thus it's encouraged that business establishments try to get a copy of the app on their own and also serve on [surge.sh](https://surge.sh). Though it's best if the city/municipality runs a copy of this app on their own, and have the businesses use it.
+**A:** No. This web app doesn't use or communicate with any database. All your data is stored on your phone (or computer). You can simply clear your history and all the data used by the app will be removed from your phone.
+
+- **Q:** Can the app be used by anyone?
+
+**A:** Yes. But it's only for demo purposes. The app is currently served on a static file server site called [surge.sh](https://surge.sh). It is free so reliability can't really be ensured, especially if a lot of people starts using it. Thus it's encouraged that business establishments try to get a copy of the app on their own and also serve on [surge.sh](https://surge.sh). Though it's best if the city/municipality runs a copy of this app on their own, and have the businesses use it.
