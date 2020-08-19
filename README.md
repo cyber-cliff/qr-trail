@@ -24,9 +24,11 @@ Alternatively, they can just have the security personnel, manually clear all the
 
 **A:** The app asks for the following info: Last name, first name, middle name, nationality, age, gender, phone number, address.
 
+
 **Q:** Is my data stored in a database somewhere?
 
 **A:** No. This web app doesn't use or communicate with any database. All your data is stored on your phone (or computer). You can simply clear your history and all the data used by the app will be removed from your phone.
+
 
 **Q:** Can the app be used by anyone?
 
