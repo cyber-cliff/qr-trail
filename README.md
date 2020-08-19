@@ -1,6 +1,6 @@
 # QR Trail
 
-QR Trail is a web app created to help with contact tracing for Covid-19. It's main premise is to automate the manual process of having to fill up a form everytime you enter an establishment. It replaces it by having people register and generate their own QR code in which their data is encoded. So that when they visit different establishments, all they have to do is have their QR code scanned so the security personnel in that building can get their data.
+QR Trail is a web app created to help with contact tracing for Covid-19. It's main premise is to automate the manual process of having to fill up a form everytime you enter an establishment. It replaces it by having people register and generate their own QR code in which their data is encoded. So that when they visit different establishments, all they have to do is have their QR code scanned so the security personnel in that building can capture their data.
 
 The following steps represents the entire flow of the system:
 
