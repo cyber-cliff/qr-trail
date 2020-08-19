@@ -31,4 +31,5 @@ Alternatively, they can just have the security personnel, manually clear all the
 
 
 **Q:** Can the app be used by anyone?
+
 **A:** Yes. But it's only for demo purposes. The app is currently served on a static file server site called [surge.sh](https://surge.sh). It is free so reliability can't really be ensured, especially if a lot of people starts using it. Thus it's encouraged that business establishments try to get a copy of the app on their own and also serve on [surge.sh](https://surge.sh). Though it's best if the city/municipality runs a copy of this app on their own, and have the businesses use it.
