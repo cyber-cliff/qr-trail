@@ -13,6 +13,10 @@
     </div>
 
     <div class="form-container">
+      <b-field label="Temperature">
+        <b-input type="text" v-model="questions.temperature"></b-input>
+      </b-field>
+
       <b-field
         label="Foreign countries you have worked, visited, transited in the past 14 days?"
       >
@@ -107,6 +111,7 @@ export default {
     return {
       visitor: null,
       questions: {
+        temperature: "36",
         travelled_foreign_countries: "no",
         foreign_countries_text: "",
 

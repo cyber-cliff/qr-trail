@@ -30,7 +30,7 @@ export default {
   name: "Header",
   data() {
     return {
-      url: "https://qrid.surge.sh",
+      url: "https://qr_trail.surge.sh",
       is_scan_page: this.$route.name == "Scan",
     };
   },
