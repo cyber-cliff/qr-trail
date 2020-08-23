@@ -13,6 +13,8 @@ import {
   Table,
   Notification,
   Dialog,
+  Datepicker,
+  Timepicker,
 } from "buefy";
 import "buefy/dist/buefy.css";
 import VueLocalStorage from "vue-localstorage";
@@ -25,6 +27,8 @@ Vue.use(Loading);
 Vue.use(Table);
 Vue.use(Notification);
 Vue.use(Dialog);
+Vue.use(Datepicker);
+Vue.use(Timepicker);
 
 Vue.use(VueRouter);
 Vue.use(VueLocalStorage);

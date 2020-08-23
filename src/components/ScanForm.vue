@@ -13,6 +13,26 @@
     </div>
 
     <div class="form-container">
+      <b-field label="Date">
+        <b-datepicker
+          ref="datepicker"
+          v-model="questions.date"
+          expanded
+          placeholder="Click to select a date..."
+        >
+        </b-datepicker>
+      </b-field>
+
+      <b-field label="Check-in Time">
+        <b-timepicker
+          v-model="questions.time"
+          placeholder="Click to select time..."
+          :enable-seconds="enableSeconds"
+          :hour-format="hourFormat"
+        >
+        </b-timepicker>
+      </b-field>
+
       <b-field label="Temperature">
         <b-input type="text" v-model="questions.temperature"></b-input>
       </b-field>
@@ -98,6 +118,7 @@
 
 <script>
 import CryptoJS from "crypto-js";
+import formatDate from "date-format";
 import { QrcodeStream } from "vue-qrcode-reader";
 
 import { EventBus } from "../event-bus.js";
@@ -110,7 +131,13 @@ export default {
   data() {
     return {
       visitor: null,
+
+      enableSeconds: true,
+      hourFormat: "24",
+
       questions: {
+        date: new Date(),
+        time: new Date(),
         temperature: "36",
         travelled_foreign_countries: "no",
         foreign_countries_text: "",
@@ -176,6 +203,9 @@ export default {
 
     saveVisitor() {
       if (this.visitor) {
+        this.questions.date = formatDate("yyyy/MM/dd", this.questions.date);
+        this.questions.time = formatDate("hh:mm", this.questions.time);
+
         this.questions.travelled_foreign_countries = this.questions
           .foreign_countries_text
           ? "yes"
