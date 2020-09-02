@@ -9,7 +9,7 @@ The following steps represents the entire flow of the system:
 3. The user downloads the QR code on their phone and have it printed so it can be easily scanned later on.
 4. With the QR code in hand, the user enters an establishment and shows their QR code to the security personnel. 
 5. The personnel goes to [https://qr_trail.surge.sh/#/scan](https://qr_trail.surge.sh/#/scan) to scan the QR code. For this to work, their phone needs to be a smartphone with a camera.
-6. Once the QR code is recognized, the visitor's info will appear on the screen. The personnel can then skip the questionnaire and save the default data as it is. They can also go through the questionnaire and ask the visitor. 
+6. Once the QR code is recognized, the visitor's info will appear on the screen. The personnel can then skip the questionnaire (the temperature defaults to `36`) and save the default data as it is. They can also go through the questionnaire and ask the visitor. 
 7. At the end of the day, the security personnel can go to [https://qr_trail.surge.sh/#/files](https://qr_trail.surge.sh/#/files) or simply click on the **Files** button while on the scan page to view all the visitors that day. From this page, they can download the CSV (comma-separated list) file containing all the visitors data for that day.
 8. The security personnel submits the CSV file to whoever is in charge with collecting the data for contact tracing.
 
