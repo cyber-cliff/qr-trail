@@ -14,6 +14,12 @@ export default {
 			Vue.localStorage.set("visitors", JSON.stringify(this.visitors));
 		});
 
+		EventBus.$on("visitor:clear", () => {
+			this.visitors = [];
+			window.localStorage.clear();
+			this.$buefy.dialog.alert("Visitor data is cleared!");
+		});
+
 		const visitors = Vue.localStorage.get("visitors");
 		if (visitors) {
 			this.visitors = JSON.parse(visitors);

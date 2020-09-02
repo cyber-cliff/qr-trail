@@ -6,6 +6,12 @@
       </b-button>
 
       <div class="boxu">
+        <b-button class="is-danger" @click="clearData" expanded>
+          Clear Data
+        </b-button>
+      </div>
+
+      <div class="boxu">
         <b-table :data="visitors" :columns="columns"></b-table>
       </div>
     </div>
@@ -24,6 +30,7 @@
 <script>
 import Papa from "papaparse";
 import { saveAs } from "file-saver";
+import { EventBus } from "../event-bus.js";
 
 export default {
   name: "Table",
@@ -82,6 +89,16 @@ export default {
       var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
       const date = this.getDate();
       saveAs(blob, `visitors-${date}.csv`);
+    },
+
+    clearData() {
+      this.$buefy.dialog.confirm({
+        message:
+          "Are you sure you want to clear all the data? Download the CSV first if you haven't done so already.",
+        onConfirm: () => {
+          EventBus.$emit("visitor:clear");
+        },
+      });
     },
   },
 };
