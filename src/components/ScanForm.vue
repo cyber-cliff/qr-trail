@@ -37,74 +37,118 @@
         <b-input type="text" v-model="questions.temperature"></b-input>
       </b-field>
 
-      <b-field
-        label="Foreign countries you have worked, visited, transited in the past 14 days?"
-      >
-        <b-input
-          type="text"
-          v-model="questions.foreign_countries_text"
-        ></b-input>
-      </b-field>
-
-      <b-field
-        label="Cities in the Philippines you have worked, lived or transited in the past 14 days?"
-      >
-        <b-input type="text" v-model="questions.cities_worked_text"></b-input>
-      </b-field>
-
-      <b-field
-        label="Have you been sick in the past 30 days? Hospital visited if any?"
-      >
-        <b-input
-          type="text"
-          v-model="questions.hospitals_visited_text"
-        ></b-input>
-      </b-field>
-
-      <b-field
-        label="In the last 14 days, did you have any of the following: fever, colds, cough, sore throat, loss of smell and taste, muscle pain, headache or difficulty in breathing?"
-      >
-        <b-input type="text" v-model="questions.symptoms_text"></b-input>
-      </b-field>
-
-      <b-field
-        label="In the last 14 days, have you been in close contact or exposed to any person suspected of our confirmed with COVID-19?"
-      >
-        <b-input
-          type="text"
-          v-model="questions.close_contact_person_text"
-        ></b-input>
-      </b-field>
-
-      <b-field
-        label="In the last 14 days, have you been in close contact with farm animals or exposed to wild animals?"
-      >
-        <b-input
-          type="text"
-          v-model="questions.close_contact_animal_text"
-        ></b-input>
-      </b-field>
-
       <div class="block">
         <b-field
-          label="The information I have given is true, correct, and complete. I understand that failure to answer any question or giving false answer can be penalized in accordance with law."
+          label="Have you have worked, visited, transited in any foreign country in the past 14 days?"
         />
-        <b-radio v-model="questions.consent_one" native-value="yes">
+        <b-radio
+          v-model="questions.travelled_foreign_countries"
+          native-value="yes"
+        >
           Yes
         </b-radio>
-        <b-radio v-model="questions.consent_one" native-value="no">
+        <b-radio
+          v-model="questions.travelled_foreign_countries"
+          native-value="no"
+        >
           No
         </b-radio>
       </div>
 
       <div class="block">
         <b-field
-          label="I voluntarily and freely consent to the collection and sharing of the above personal information only in relation to the Hrep COVID-19 internal protocols."
+          label="Cities in the Philippines you have worked, lived or transited in the past 14 days?"
         />
-        <b-radio v-model="questions.consent_two" native-value="yes">
+        <b-radio v-model="questions.cities_worked" native-value="yes">
           Yes
         </b-radio>
-        <b-radio v-model="questions.consent_two" native-value="no">
+        <b-radio v-model="questions.cities_worked" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field label="Sore throat" />
+        <b-radio v-model="questions.symptoms_sore_throat" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.symptoms_sore_throat" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field label="Body pains" />
+        <b-radio v-model="questions.symptoms_body_pains" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.symptoms_body_pains" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field label="Headache" />
+        <b-radio v-model="questions.symptoms_headache" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.symptoms_headache" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field label="Fever" />
+        <b-radio v-model="questions.symptoms_fever" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.symptoms_fever" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field label="Have you been sick in the past 30 days?" />
+        <b-radio v-model="questions.sick" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.sick" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field
+          label="Have you had any contact with anyone with fever, cough, cold, and sore throat in the past 14 days?"
+        />
+        <b-radio v-model="questions.close_contact_person" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.close_contact_person" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field
+          label="In the last 14 days, have you been in close contact with farm animals or exposed to wild animals?"
+        />
+        <b-radio v-model="questions.close_contact_animal" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.close_contact_animal" native-value="no">
+          No
+        </b-radio>
+      </div>
+
+      <div class="block">
+        <b-field
+          label="I understand that my personal information is protected by RA 10173, Data Privacy Act of 2012, and that I am required by RA 11469, Bayanihan to Heal as One Act, to provide thruthful information."
+        />
+        <b-radio v-model="questions.agree_to_collect_data" native-value="yes">
+          Yes
+        </b-radio>
+        <b-radio v-model="questions.agree_to_collect_data" native-value="no">
           No
         </b-radio>
       </div>
@@ -139,26 +183,22 @@ export default {
         date: new Date(),
         time: new Date(),
         temperature: "36",
+
         travelled_foreign_countries: "no",
-        foreign_countries_text: "",
 
         cities_worked: "no",
-        cities_worked_text: "",
 
-        hospitals_visited: "no",
-        hospitals_visited_text: "",
-
-        symptoms: "no",
-        symptoms_text: "",
+        symptoms_sore_throat: "no",
+        symptoms_body_pains: "no",
+        symptoms_headache: "no",
+        symptoms_fever: "no",
+        sick: "no",
 
         close_contact_person: "no",
-        close_contact_person_text: "",
 
         close_contact_animal: "no",
-        close_contact_animal_text: "",
 
-        consent_one: "yes",
-        consent_two: "yes",
+        agree_to_collect_data: "yes",
       },
 
       columns: [
@@ -206,29 +246,6 @@ export default {
         this.questions.date = formatDate("yyyy/MM/dd", this.questions.date);
         this.questions.time = formatDate("hh:mm", this.questions.time);
 
-        this.questions.travelled_foreign_countries = this.questions
-          .foreign_countries_text
-          ? "yes"
-          : "no";
-
-        this.questions.cities_worked = this.questions.cities_worked_text
-          ? "yes"
-          : "no";
-        this.questions.hospitals_visited = this.questions.hospitals_visited_text
-          ? "yes"
-          : "no";
-
-        this.questions.symptoms = this.questions.symptoms_text ? "yes" : "no";
-        this.questions.close_contact_person = this.questions
-          .close_contact_person_text
-          ? "yes"
-          : "no";
-
-        this.questions.close_contact_animal = this.questions
-          .close_contact_animal_text
-          ? "yes"
-          : "no";
-
         Object.assign(this.visitor, this.questions);
 
         EventBus.$emit("visitor:add", this.visitor);
@@ -256,7 +273,12 @@ export default {
         foreign_countries_text: "",
 
         cities_worked: "no",
-        cities_worked_text: "",
+
+        symptoms_sore_throat: "no",
+        symptoms_body_pains: "no",
+        symptoms_headache: "no",
+        symptoms_fever: "no",
+        sick: "no",
 
         hospitals_visited: "no",
         hospitals_visited_text: "",
@@ -265,13 +287,11 @@ export default {
         symptoms_text: "",
 
         close_contact_person: "no",
-        close_contact_person_text: "",
 
         close_contact_animal: "no",
         close_contact_animal_text: "",
 
-        consent_one: "yes",
-        consent_two: "yes",
+        agree_to_collect_data: "yes",
       };
     },
   },
