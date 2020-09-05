@@ -50,24 +50,8 @@ export default {
           label: "First Name",
         },
         {
-          field: "mname",
-          label: "Mid Name",
-        },
-        {
-          field: "nation",
-          label: "Nationality",
-        },
-        {
-          field: "age",
+          field: "phone",
           label: "Phone",
-        },
-        {
-          field: "address",
-          label: "Address",
-        },
-        {
-          field: "gender",
-          label: "Gender",
         },
       ],
     };
