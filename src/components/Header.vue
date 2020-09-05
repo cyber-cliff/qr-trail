@@ -17,6 +17,12 @@
           Files
         </b-button>
       </div>
+
+      <div class="column" v-if="is_files_page">
+        <b-button class="is-pulled-right" type="is-light" @click="gotToScan">
+          Scan
+        </b-button>
+      </div>
     </div>
   </section>
 </template>
@@ -32,11 +38,15 @@ export default {
     return {
       url: "https://qr_trail.surge.sh",
       is_scan_page: this.$route.name == "Scan",
+      is_files_page: this.$route.name == "Files",
     };
   },
   methods: {
     goToFiles() {
       this.$router.push("/files");
+    },
+    gotToScan() {
+      this.$router.push("/scan");
     },
   },
 };
