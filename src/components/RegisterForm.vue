@@ -230,7 +230,7 @@ export default {
 
         close_contact_animal: "N",
       },
-      agree: "N",
+      agree: "Y",
       url: "",
     };
   },
