@@ -35,7 +35,7 @@
         <b-input type="text" v-model="user.phone" required></b-input>
       </b-field>
 
-      <b-field label="Address">
+      <b-field label="Complete Dauis Address w/ Purok">
         <b-input type="text" v-model="user.address" required></b-input>
       </b-field>
 
