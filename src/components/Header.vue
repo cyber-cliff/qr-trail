@@ -9,7 +9,7 @@
             tag="img"
           ></qrcode>
         </div>
-        <h1 class="inline">_ _QR Trail</h1>
+        <h1 class="inline">Dauis QR</h1>
       </div>
 
       <div class="column" v-if="is_scan_page">
