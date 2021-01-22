@@ -9,7 +9,7 @@
             tag="img"
           ></qrcode>
         </div>
-        <h1 class="inline">Dauis QR</h1>
+        <h1 class="inline">Dauis QR Trace</h1>
       </div>
 
       <div class="column" v-if="is_scan_page">
