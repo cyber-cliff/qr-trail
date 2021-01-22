@@ -35,7 +35,7 @@ Vue.use(VueLocalStorage);
 
 const routes = [
   {
-    path: "/",
+    path: "/register",
     name: "Register",
     component: Register,
   },
