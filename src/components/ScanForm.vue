@@ -61,7 +61,7 @@ export default {
       visitor: null,
 
       enableSeconds: true,
-      hourFormat: "24",
+      hourFormat: "12",
 
       questions: {
         date: new Date(),
